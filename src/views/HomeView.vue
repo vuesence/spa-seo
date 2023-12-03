@@ -6,10 +6,15 @@ interface IOption {
 }
 const str = ref("");
 onMounted(() => {
+  document.querySelector('meta[property="og:description"]').content = "Home page description (og) - 1";
+  document.querySelector('meta[name="twitter:description"]').content = "Home page description (tw) - 1";
+
   fetch("https://jsonplaceholder.typicode.com/todos/2")
       .then((response) => response.json())
       .then((json) => {
         str.value = json.title + " --- The brown mole is flying to Betelgeuse.";
+        document.querySelector('meta[property="og:description"]').content = "Home page description (og) - 2";
+        document.querySelector('meta[name="twitter:description"]').content = "Home page description (tw) - 2";
       });
 });
 
