@@ -13,7 +13,7 @@
     <!-- Facebook Meta Tags -->
     <!-- <meta property="og:url" content="" /> -->
     <meta property="og:title" content="placeholder" />
-    <meta property="og:description" content="og-desc-placeholder" />
+    <!-- <meta property="og:description" content="og-desc-placeholder" /> -->
     <meta property="og:image" content="/assets/images/favicon-32x32.png" />
 
     <!-- Twitter Meta Tags -->
@@ -27,14 +27,19 @@
     <!-- Meta Tags Generated via DNSChecker.org -->
 
     <!-- service-worker placeholder -->
-    <script>
-      document.querySelector('meta[property="og:title"]').content = "Home page title (og) - 0";
-      document.querySelector('meta[property="og:description"]').content = "Home page description (og) - 0";
-      document.querySelector('meta[name="twitter:description"]').content = "Home page description (tw) - 0";
-    </script>
     <script type="module" crossorigin src="/spa-seo/assets/index-DAydC8oe.js"></script>
     <link rel="stylesheet" crossorigin href="/spa-seo/assets/index-CJbDtbR_.css">
   </head>
+  <script>
+    const m = document.createElement("meta");
+    m.property = "og:description";
+    m.content = "og - DESC";
+    document.head.appendChild(m);
+
+    document.querySelector('meta[property="og:title"]').content = "Home page title (og) - 0";
+    document.querySelector('meta[property="og:description"]').content = "Home page description (og) - 0";
+    document.querySelector('meta[name="twitter:description"]').content = "Home page description (tw) - 0";
+  </script>
   <body>
     <div id="app" />
   </body>
